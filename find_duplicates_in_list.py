@@ -1,11 +1,11 @@
 def find_dups(arr):
-    a = set ()
+    seen = set ()
     dups = set ()
     for i in arr:
-        if i in a:
+        if i in seen:
             dups.add(i)
         else:
-            a.add(i)
+            seen.add(i)
     return list(dups)
 
 arr = list(map(int, input("Enter array elements separated by space: ").split()))
